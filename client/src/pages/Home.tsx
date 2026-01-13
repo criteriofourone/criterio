@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* COURSES SECTION */}
-      <section id="courses" className="py-24 bg-secondary/20 border-t border-border/60">
+      <section id="courses" className="py-24 bg-background border-t border-border/60">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
