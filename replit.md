@@ -54,6 +54,12 @@ Preferred communication style: Simple, everyday language.
 - **Type-Safe API**: Zod schemas validate both API responses and provide TypeScript types
 - **Component Composition**: UI built from composable shadcn/ui primitives with Radix UI accessibility
 - **Path Aliases**: `@/` for client source, `@shared/` for shared code, `@assets/` for attached assets
+- **SEO Optimization**: Metadata, Open Graph, and Twitter tags optimized for the Dominican Republic business education market in Spanish.
+
+## Recent Changes
+- Updated Dockerfile for CapRover deployment with ESM support.
+- Fixed server-side path resolution issues for production.
+- Enhanced SEO with targeted keywords and meta descriptions.
 
 ## External Dependencies
 
