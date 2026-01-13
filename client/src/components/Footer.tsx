@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImg from "@assets/Criterio___Four_One_20260113_014323_0000_1768286000476.png";
+import logoFooter from "@assets/Criterio___Four_One_20260113_014323_0000_1768289064360.png";
 
 export function Footer() {
   return (
@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-6">
             <img 
-              src={logoImg} 
+              src={logoFooter} 
               alt="Criterio | Four One Solutions" 
-              className="h-16 w-auto brightness-0 invert"
+              className="h-20 w-auto brightness-0 invert"
             />
             <p className="text-sm text-gray-300 leading-relaxed max-w-xs">
               Soluciones estratégicas y análisis de alto nivel para la formación empresarial, contable y de gestión de resultados.
