@@ -38,76 +38,72 @@ async function seedDatabase() {
   if (existingCourses.length === 0) {
     // Course 1
     await storage.createCourse({
-      title: "Como Calcular los Costos Reales de tu Negocio",
+      title: "Dominio de Costos: Maximiza la Rentabilidad de tu Negocio",
       affiliateLink: "https://go.hotmart.com/F103838473V",
-      description: "Emprendedores que no saben si su negocio realmente genera ganancias.",
+      description: "Optimice su margen de beneficio mediante un análisis técnico y preciso de sus costos operativos y financieros.",
       learningPoints: [
-        "Identificación de costos reales",
-        "Separación de finanzas personales y empresariales",
-        "Cálculo correcto de precios"
+        "Ingeniería de costos y márgenes de contribución",
+        "Blindaje financiero: separación de activos personales y corporativos",
+        "Estrategias avanzadas de pricing para mercados competitivos"
       ],
-      idealProfile: "Pequeños empresarios, emprendedores, profesionales independientes",
-      pros: ["Práctico", "Claro", "Aplicable de inmediato"],
-      cons: ["No sustituye asesoría contable personalizada"],
-      certification: "No especificado",
-      ctaText: "Ver curso en Hotmart",
-      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000" // Accounting/Business generic
+      idealProfile: "Directivos, propietarios de PyMEs y consultores independientes",
+      pros: ["Metodología técnica", "Implementación inmediata", "Plantillas de cálculo profesional"],
+      cons: ["Requiere disciplina en el registro de datos"],
+      certification: null, // No certification indicated
+      ctaText: "Adquirir Programa de Costos",
+      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000"
     });
 
     // Course 2
     await storage.createCourse({
-      title: "¡Formaliza tu negocio ya! Guía definitiva para emprendedores en RD",
+      title: "Estructura Legal y Fiscal: Guía de Formalización en RD",
       affiliateLink: "https://go.hotmart.com/A103838549L",
-      description: "Guía práctica para formalizar negocios en República Dominicana.",
+      description: "Asegure el cumplimiento normativo y acceda a beneficios corporativos formalizando su operación en la República Dominicana.",
       learningPoints: [
-        "Tipos de empresas en RD",
-        "Régimen fiscal",
-        "Errores comunes al formalizar"
+        "Arquitectura de sociedades comerciales en RD (SRL, EIRL, SA)",
+        "Optimización del régimen fiscal y cumplimiento ante la DGII",
+        "Mitigación de riesgos legales en la etapa de constitución"
       ],
-      idealProfile: "Emprendedores dominicanos que desean operar legalmente",
-      pros: ["Enfoque local (RD)", "Lenguaje claro", "Pasos concretos"],
-      cons: ["Formato guía / ebook", "No incluye asesoría personalizada"],
-      certification: "No incluye constancia formal",
-      ctaText: "Acceder a la guía en Hotmart",
-      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1000" // Legal/Paperwork
+      idealProfile: "Inversionistas y fundadores de startups en territorio dominicano",
+      pros: ["Especialización local", "Ruta crítica de pasos legales", "Lenguaje ejecutivo"],
+      cons: ["No incluye gestión de trámites ante registros públicos"],
+      certification: null,
+      ctaText: "Descargar Guía de Formalización",
+      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1000"
     });
 
     // Course 3
     await storage.createCourse({
-      title: "Abre tu propia empresa LLC en Florida, EEUU",
+      title: "Internacionalización: Constitución de LLC en Florida",
       affiliateLink: "https://go.hotmart.com/U103838513C",
-      description: "Curso paso a paso para abrir una LLC en Florida desde el extranjero.",
+      description: "Expanda su presencia global mediante una estructura corporativa eficiente en los Estados Unidos.",
       learningPoints: [
-        "Conceptos legales básicos",
-        "Proceso de registro",
-        "Documentación fiscal inicial"
+        "Marco jurídico de las LLC en Florida para no residentes",
+        "Protocolo de registro y obtención de EIN",
+        "Fundamentos de planificación fiscal internacional"
       ],
-      idealProfile: "Emprendedores que desean expandirse o internacionalizar su negocio",
-      pros: ["Enfoque estructurado", "Alta demanda"],
-      cons: ["No reemplaza asesoría legal especializada"],
-      certification: "Certificado de finalización disponible",
-      ctaText: "Ver curso completo en Hotmart",
-      imageUrl: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&q=80&w=1000" // Florida/International business
+      idealProfile: "Empresarios con visión global y exportadores de servicios",
+      pros: ["Enfoque estratégico", "Optimización de impuestos internacionales", "Guía paso a paso"],
+      cons: ["Consultoría legal específica para visas no incluida"],
+      certification: "Certificado de Finalización Académica",
+      ctaText: "Iniciar Proceso Internacional",
+      imageUrl: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&q=80&w=1000"
     });
   }
 
   const existingFaqs = await storage.getFaqs();
   if (existingFaqs.length === 0) {
     await storage.createFaq({
-      question: "¿Este sitio vende cursos?",
-      answer: "No, este sitio solo analiza y recomienda cursos. La compra se realiza directamente en la plataforma segura de Hotmart."
+      question: "¿Cuál es el modelo de negocio de este portal?",
+      answer: "Operamos como una firma de análisis y curaduría de formación profesional. Facilitamos el acceso a programas de alta calidad mediante alianzas estratégicas con Hotmart."
     });
     await storage.createFaq({
-      question: "¿Qué es un enlace de afiliado?",
-      answer: "Es un enlace especial que nos permite recibir una pequeña comisión si decides comprar el curso, sin costo adicional para ti."
+      question: "¿Existe algún costo adicional por acceder mediante Criterio?",
+      answer: "En absoluto. Usted accede a las tarifas oficiales de los productores, beneficiándose de nuestra selección experta sin cargos adicionales."
     });
     await storage.createFaq({
-      question: "¿Pago más por comprar desde aquí?",
-      answer: "No. El precio es exactamente el mismo que si compraras directamente al productor."
-    });
-    await storage.createFaq({
-      question: "¿Los cursos son oficiales de Hotmart?",
-      answer: "Los cursos están alojados y vendidos a través de la tecnología de Hotmart, que garantiza la entrega y la seguridad del pago."
+      question: "¿Cómo se garantiza la seguridad de mi transacción?",
+      answer: "Todas las transacciones se procesan a través de la infraestructura de Hotmart, líder global en productos digitales, garantizando encriptación bancaria y protección al comprador."
     });
   }
 }

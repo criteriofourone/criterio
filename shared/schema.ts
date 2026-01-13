@@ -7,13 +7,13 @@ export const courses = pgTable("courses", {
   title: text("title").notNull(),
   affiliateLink: text("affiliate_link").notNull(),
   description: text("description").notNull(),
-  learningPoints: text("learning_points").array().notNull(), // Stored as array of strings
+  learningPoints: text("learning_points").array().notNull(),
   idealProfile: text("ideal_profile").notNull(),
   pros: text("pros").array().notNull(),
   cons: text("cons").array().notNull(),
-  certification: text("certification").notNull(),
+  certification: text("certification"), // Changed to optional
   ctaText: text("cta_text").notNull(),
-  imageUrl: text("image_url"), // Optional placeholder
+  imageUrl: text("image_url"),
 });
 
 export const faqs = pgTable("faqs", {
