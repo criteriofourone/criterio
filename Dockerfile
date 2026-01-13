@@ -6,7 +6,7 @@ WORKDIR /app
 # Copiar archivos de configuración de dependencias
 COPY package*.json ./
 
-# Instalar dependencias (incluyendo devDependencies para construir)
+# Instalar dependencias
 RUN npm install
 
 # Copiar el resto del código
@@ -20,22 +20,20 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Instalar solo dependencias de producción para mantener la imagen ligera
+# Instalar solo dependencias de producción
 COPY package*.json ./
 RUN npm install --omit=dev
 
 # Copiar archivos necesarios
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
-COPY --from=builder /app/shared ./shared
 
-# Exponer el puerto 80
+# Puerto que usa CapRover por defecto (80) o el configurado
 EXPOSE 80
 
 # Variables de entorno
+# Se asegura de que use MemStorage por defecto en producción al no configurar DATABASE_URL
 ENV NODE_ENV=production
 ENV PORT=80
 
 # Comando para iniciar
-# El template genera dist/index.cjs como bundle del servidor
-CMD ["node", "dist/index.cjs"]
+CMD ["npm", "start"]

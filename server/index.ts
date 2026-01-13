@@ -56,8 +56,7 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS listen on port 5000 in development
-  // In production, CapRover will use the PORT env var (80)
+  // In production, CapRover will use the PORT env var (defaults to 80)
   const port = process.env.PORT || 5000;
   server.listen({
     port,
