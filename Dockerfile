@@ -35,4 +35,5 @@ ENV NODE_ENV=production
 ENV PORT=80
 
 # Comando para iniciar la aplicación
-CMD ["npm", "start"]
+# Usamos directamente el archivo compilado generado por el script de build del template
+CMD ["node", "dist/index.cjs"]
