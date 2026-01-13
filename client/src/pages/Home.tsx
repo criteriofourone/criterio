@@ -19,6 +19,20 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section className="relative pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden">
+        {/* Schema.org markup for SEO */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Criterio | Four One Solutions",
+            "url": "https://criteriofourone.com",
+            "description": "Análisis de alto nivel para la formación empresarial en República Dominicana y el extranjero.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Four One Solutions"
+            }
+          })}
+        </script>
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/50 via-background to-background"></div>
         
