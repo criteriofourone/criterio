@@ -10,7 +10,7 @@ export function Footer() {
             <img 
               src={logoFooter} 
               alt="Criterio | Four One Solutions" 
-              className="h-20 w-auto brightness-0 invert"
+              className="h-20 w-auto object-contain"
             />
             <p className="text-sm text-gray-300 leading-relaxed max-w-xs">
               Soluciones estratégicas y análisis de alto nivel para la formación empresarial, contable y de gestión de resultados.
