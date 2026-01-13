@@ -14,7 +14,7 @@ export function Header() {
     { name: "Cursos Analizados", href: "/#courses" },
     { name: "Metodología", href: "/#methodology" },
     { name: "Preguntas Frecuentes", href: "/#faq" },
-    { name: "Contacto", href: "mailto:contacto@criteriofourone.com" },
+    { name: "Contacto", href: "mailto:info@fourone.com.do" },
   ];
 
   const handleNavClick = (href: string) => {
