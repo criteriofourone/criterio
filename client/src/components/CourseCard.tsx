@@ -21,11 +21,11 @@ export function CourseCard({ course, index }: CourseCardProps) {
         {/* Content Side */}
         <div className="lg:col-span-8 p-6 md:p-8 lg:p-10 flex flex-col h-full">
           <div className="mb-6">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3 leading-tight">
+            <h2 className="font-serif text-2xl md:text-4xl font-bold text-primary mb-4 leading-tight">
               {course.title}
             </h2>
-            <div className="h-1 w-20 bg-primary/10 rounded-full mb-4"></div>
-            <p className="text-muted-foreground text-lg leading-relaxed text-balance">
+            <div className="h-1.5 w-24 bg-primary rounded-full mb-6"></div>
+            <p className="text-foreground/90 text-lg font-medium leading-relaxed text-balance italic border-l-4 border-primary pl-6 py-2 bg-primary/5">
               {course.description}
             </p>
           </div>
@@ -100,12 +100,12 @@ export function CourseCard({ course, index }: CourseCardProps) {
         {/* CTA Side / Sticky on Desktop */}
         <div className="lg:col-span-4 bg-secondary/10 border-t lg:border-t-0 lg:border-l border-border p-6 md:p-8 flex flex-col justify-center items-center text-center">
           <div className="sticky top-24 w-full">
-            <div className="mb-6 p-4 bg-background rounded-lg border border-border shadow-sm">
-              <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground block mb-2">
-                Veredicto
+            <div className="mb-8 p-6 bg-white rounded-lg border border-primary/20 shadow-xl shadow-primary/5">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary/60 block mb-3">
+                Perspectiva Estratégica
               </span>
-              <p className="font-serif text-lg font-medium text-primary italic">
-                "Recomendado por su {course.pros[0]?.toLowerCase() || 'calidad'}."
+              <p className="font-serif text-xl font-bold text-primary leading-snug">
+                "Recomendado por su {course.pros[0]?.toLowerCase() || 'excelencia técnica'}."
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export function CourseCard({ course, index }: CourseCardProps) {
               href={course.affiliateLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-primary rounded-lg hover:bg-primary/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="group relative w-full inline-flex items-center justify-center px-8 py-5 text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 bg-primary rounded-lg hover:bg-secondary hover:shadow-2xl hover:translate-y-[-3px] active:translate-y-0"
             >
               <span>{course.ctaText}</span>
               <ExternalLink className="w-4 h-4 ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />

@@ -5,30 +5,30 @@
 @tailwind utilities;
 
 :root {
-  /* Editorial Palette: Professional, Trustworthy, Clean */
-  --background: 210 20% 98%;      /* Off-white */
-  --foreground: 222 47% 11%;      /* Deep Navy/Black */
+  /* Branding Palette based on Logo: #216894 */
+  --background: 210 20% 98%;      
+  --foreground: 222 47% 11%;      
   
-  --primary: 222 47% 11%;         /* Deep Navy - Strong authority */
-  --primary-foreground: 210 40% 98%;
+  --primary: 203 63% 36%;         /* #216894 */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 10% 90%;       /* Light Gray for secondary backgrounds */
-  --secondary-foreground: 222 47% 11%;
+  --secondary: 210 39% 17%;       /* #1A2B3C - Dark Navy from logo accents */
+  --secondary-foreground: 0 0% 100%;
 
   --muted: 210 20% 94%;
-  --muted-foreground: 215 16% 40%; /* Professional Gray */
+  --muted-foreground: 215 16% 40%; 
 
-  --accent: 214 32% 91%;          /* Subtle blue-gray accent */
-  --accent-foreground: 222 47% 11%;
+  --accent: 203 63% 45%;          /* Slightly lighter blue for accents */
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214 20% 85%;
-  --input: 214 20% 85%;
-  --ring: 222 47% 11%;
+  --border: 210 20% 85%;
+  --input: 210 20% 85%;
+  --ring: 203 63% 36%;
 
-  --radius: 0.25rem; /* Sharper corners for editorial look */
+  --radius: 0.25rem; 
   
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;

@@ -1,15 +1,19 @@
 import { Link } from "wouter";
+import logoImg from "@assets/Criterio___Four_One_20260113_014323_0000_1768286000476.png";
 
 export function Footer() {
   return (
-    <footer className="bg-secondary/30 border-t border-border mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div className="space-y-4">
-            <h3 className="font-serif text-xl font-bold text-primary">Criterio | Four One</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Análisis honesto de formación empresarial, contable y de gestión.
-              Ayudamos a emprendedores a tomar decisiones informadas.
+    <footer className="bg-secondary text-white border-t border-white/10 mt-20">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div className="space-y-6">
+            <img 
+              src={logoImg} 
+              alt="Criterio | Four One Solutions" 
+              className="h-16 w-auto brightness-0 invert"
+            />
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
+              Soluciones estratégicas y análisis de alto nivel para la formación empresarial, contable y de gestión de resultados.
             </p>
           </div>
           

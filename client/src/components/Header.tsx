@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@assets/Criterio___Four_One_20260113_014323_0000_1768286000476.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,12 +29,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 z-50">
-          <span className="font-serif text-2xl font-bold tracking-tighter text-primary">
-            Criterio <span className="text-muted-foreground font-light mx-1">|</span> Four One
-          </span>
+        <Link href="/" className="flex items-center z-50">
+          <img 
+            src={logoImg} 
+            alt="Criterio | Four One Solutions" 
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -48,7 +51,7 @@ export function Header() {
                   handleNavClick(item.href);
                 }
               }}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-semibold uppercase tracking-wider transition-colors hover:text-primary ${
                 location === item.href ? "text-primary" : "text-muted-foreground"
               }`}
             >

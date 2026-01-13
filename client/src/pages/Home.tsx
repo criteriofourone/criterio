@@ -28,23 +28,19 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-border">
-              Análisis Editorial Independiente
-            </span>
-            
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-8 leading-[1.1] tracking-tight text-balance">
-              Formación empresarial útil, analizada con criterio profesional
+              Formación empresarial de élite, analizada para resultados reales
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed text-balance">
-              Analizamos cursos de emprendimiento, contabilidad y gestión empresarial enfocados en resultados reales y aplicables al contexto de República Dominicana.
+              Optimice su trayectoria corporativa con nuestra curaduría experta de programas en emprendimiento, contabilidad y gestión estratégica.
             </p>
 
             <button
               onClick={scrollToCourses}
-              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:translate-y-[-2px] shadow-lg shadow-primary/20"
+              className="inline-flex items-center px-10 py-4 bg-primary text-primary-foreground rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-primary/90 transition-all hover:translate-y-[-2px] shadow-xl shadow-primary/20"
             >
-              Ver cursos recomendados
+              Explorar Programas de Éxito
               <ArrowDown className="ml-2 w-4 h-4" />
             </button>
           </motion.div>
@@ -128,18 +124,18 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-2xl -rotate-6 transform scale-105"></div>
               <div className="bg-card border border-border p-8 rounded-2xl relative shadow-lg">
-                <h3 className="font-serif text-2xl font-bold mb-4">Sobre este proyecto</h3>
+                <h3 className="font-serif text-2xl font-bold mb-4">Liderazgo en Curaduría</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  <strong>Criterio | Four One</strong> es un proyecto editorial independiente nacido de la necesidad de filtrar el ruido en la educación online.
+                  <strong>Criterio | Four One Solutions</strong> representa el estándar de excelencia en la evaluación de formación ejecutiva y corporativa.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  No vendemos cursos propios ni ofrecemos asesoría directa. Nuestro único objetivo es analizar formación disponible en Hotmart y facilitar decisiones informadas para profesionales y emprendedores.
+                  Filtramos la saturación del mercado educativo para presentarle únicamente soluciones que impactan directamente en el EBITDA y la estructura legal de su organización.
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <Search className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-sm font-medium text-primary">Análisis 100% Independiente</span>
+                  <span className="text-sm font-bold uppercase tracking-widest text-primary">Análisis de Alto Nivel</span>
                 </div>
               </div>
             </div>
