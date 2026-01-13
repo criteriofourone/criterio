@@ -27,12 +27,12 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/shared ./shared
 
-# Exponer el port 5000 (el que usa el template por defecto)
-EXPOSE 5000
+# Exponer el puerto 80 para CapRover
+EXPOSE 80
 
 # Variables de entorno por defecto
 ENV NODE_ENV=production
-ENV PORT=5000
+ENV PORT=80
 
 # Comando para iniciar la aplicación
 CMD ["npm", "start"]
