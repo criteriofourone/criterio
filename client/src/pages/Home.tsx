@@ -43,11 +43,11 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-8 leading-[1.1] tracking-tight text-balance">
-              Formación empresarial de élite, analizada para resultados reales
+              La mejor formación empresarial en RD para emprendedores de éxito
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed text-balance">
-              Optimice su trayectoria corporativa con nuestra curaduría experta de programas en emprendimiento, contabilidad y gestión estratégica.
+              Optimice su trayectoria corporativa con nuestra curaduría experta de cursos de negocios, capacitación en contabilidad y gestión estratégica en la República Dominicana.
             </p>
 
             <button
