@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "@assets/Criterio___Four_One_20260113_014323_0000_1768286000476.png";
+import logoNoText from "@assets/Criterio___Four_One_20260113_014305_0001_1768286409433.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,12 @@ export function Header() {
           <img 
             src={logoImg} 
             alt="Criterio | Four One Solutions" 
-            className="h-14 w-auto object-contain"
+            className="h-14 w-auto object-contain md:block hidden"
+          />
+          <img 
+            src={logoNoText} 
+            alt="Criterio" 
+            className="h-12 w-auto object-contain md:hidden block"
           />
         </Link>
 
