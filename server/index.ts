@@ -1,8 +1,12 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, log } from "./vite";
+import { setupVite } from "./vite";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+
+const log = (message: string) => {
+  console.log(`${new Date().toLocaleTimeString()} [express] ${message}`);
+};
 
 const app = express();
 app.use(express.json());
@@ -54,7 +58,7 @@ app.use((req, res, next) => {
   // setting up all the other routes so the catch-all route
   // doesn't take precedence
   if (app.get("env") === "development") {
-    await setupVite(app, server);
+    await setupVite(server, app);
   } else {
     serveStatic(app);
   }
