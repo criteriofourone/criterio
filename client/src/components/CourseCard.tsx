@@ -104,7 +104,9 @@ export function CourseCard({ course, index }: CourseCardProps) {
                 Perspectiva Estratégica
               </span>
               <p className="font-serif text-xl font-bold text-secondary leading-snug">
-                "Recomendado por su {course.pros[0]?.toLowerCase() || 'excelencia técnica'}."
+                {course.id === 1 && "\"Solución imperativa para la optimización de márgenes operativos.\""}
+                {course.id === 2 && "\"Ruta crítica esencial para el cumplimiento normativo en el mercado local.\""}
+                {course.id === 3 && "\"Ventaja competitiva clave para la expansión de activos internacionales.\""}
               </p>
             </div>
 

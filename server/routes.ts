@@ -49,7 +49,7 @@ async function seedDatabase() {
       idealProfile: "Directivos, propietarios de PyMEs y consultores independientes",
       pros: ["Metodología técnica", "Implementación inmediata", "Plantillas de cálculo profesional"],
       cons: ["Requiere disciplina en el registro de datos"],
-      certification: null, // No certification indicated
+      certification: null,
       ctaText: "Adquirir Programa de Costos",
       imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000"
     });
