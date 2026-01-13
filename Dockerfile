@@ -20,14 +20,10 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copiar la carpeta dist generada
+# Copiar archivos necesarios desde la etapa de construcción
 COPY --from=builder /app/dist ./dist
-
-# Copiar package.json y package-lock.json para instalar solo dependencias de producción
+COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package*.json ./
-
-# Instalar solo dependencias de producción para minimizar el tamaño de la imagen
-RUN npm install --omit=dev
 
 # Puerto que usa CapRover por defecto (80)
 EXPOSE 80
@@ -37,4 +33,5 @@ ENV NODE_ENV=production
 ENV PORT=80
 
 # Comando para iniciar
-CMD ["npm", "start"]
+# Ejecutamos el servidor directamente para evitar problemas con scripts de package.json
+CMD ["node", "dist/index.js"]
