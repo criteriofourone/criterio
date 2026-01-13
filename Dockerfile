@@ -6,7 +6,7 @@ WORKDIR /app
 # Copiar archivos de configuración de dependencias
 COPY package*.json ./
 
-# Instalar dependencias
+# Instalar dependencias (incluyendo devDependencies para construir)
 RUN npm install
 
 # Copiar el resto del código
@@ -20,20 +20,22 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copiar solo lo necesario desde la etapa de construcción
+# Instalar solo dependencias de producción para mantener la imagen ligera
+COPY package*.json ./
+RUN npm install --omit=dev
+
+# Copiar archivos necesarios
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/shared ./shared
 
-# Exponer el puerto 80 para CapRover
+# Exponer el puerto 80
 EXPOSE 80
 
-# Variables de entorno por defecto
+# Variables de entorno
 ENV NODE_ENV=production
 ENV PORT=80
 
-# Comando para iniciar la aplicación
-# Usamos directamente el archivo compilado generado por el script de build del template
+# Comando para iniciar
+# El template genera dist/index.cjs como bundle del servidor
 CMD ["node", "dist/index.cjs"]
