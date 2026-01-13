@@ -44,7 +44,8 @@ async function buildAll() {
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.devDependencies || {}),
   ];
-  const externals = allDeps.filter((dep) => !allowlist.includes(dep));
+  // Remove 'vite' and '@tailwindcss/vite' from externals so they are bundled
+  const externals = allDeps.filter((dep) => !allowlist.includes(dep) && dep !== "vite" && dep !== "@tailwindcss/vite");
 
   await esbuild({
     entryPoints: ["server/index.ts"],

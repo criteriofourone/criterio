@@ -6,7 +6,7 @@ WORKDIR /app
 # Copiar archivos de configuración de dependencias
 COPY package*.json ./
 
-# Instalar dependencias (incluyendo devDependencies para construir)
+# Instalar todas las dependencias (incluyendo devDependencies para construir)
 RUN npm install
 
 # Copiar el resto del código
@@ -20,16 +20,19 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copiar archivos necesarios
+# Copiar la carpeta dist generada
 COPY --from=builder /app/dist ./dist
+
+# Copiar package.json y package-lock.json para instalar solo dependencias de producción
 COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/node_modules ./node_modules
+
+# Instalar solo dependencias de producción para minimizar el tamaño de la imagen
+RUN npm install --omit=dev
 
 # Puerto que usa CapRover por defecto (80)
 EXPOSE 80
 
 # Variables de entorno
-# Se asegura de que use MemStorage por defecto en producción al no configurar DATABASE_URL
 ENV NODE_ENV=production
 ENV PORT=80
 
